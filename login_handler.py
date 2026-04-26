@@ -40,7 +40,7 @@ class LoginHandler:
         print("等待登录弹框出现...")
         try:
             phone_input = self.wait.until(
-                EC.presence_of_element_located((By.XPATH, "//input[@placeholder='请输入手机号']"))
+                EC.presence_of_element_located((By.XPATH, "//input[@placeholder='输入手机号']"))
             )
             print("登录弹框已出现。")
             return phone_input
@@ -61,7 +61,7 @@ class LoginHandler:
     def _enter_phone_number(self, phone_number):
         print(f"正在输入手机号: {phone_number}")
         try:
-            phone_input = self.driver.find_element(By.XPATH, "//input[@placeholder='请输入手机号']")
+            phone_input = self.driver.find_element(By.XPATH, "//input[@placeholder='输入手机号']")
             phone_input.clear()
             phone_input.send_keys(phone_number)
             print("手机号输入完成。")
@@ -74,7 +74,7 @@ class LoginHandler:
         try:
             privacy_checkbox = self.wait.until(
                 EC.element_to_be_clickable(
-                    (By.XPATH, "//div[contains(@class, 'agreement')]//input[@type='checkbox'] | //div[contains(@class, 'checkbox')]")
+                    (By.XPATH, '//*[@id="app"]/div[1]/div/div[1]/div[3]/div[3]/span/div')
                 )
             )
             
