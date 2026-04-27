@@ -46,7 +46,7 @@ class ContentCrawler:
         print("等待首页加载完成...")
         try:
             self.wait.until(
-                EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'note-item')] | //a[contains(@href, '/explore/')]"))
+                EC.presence_of_element_located((By.XPATH, '//*[@id="exploreFeeds"]/section'))
             )
             print("首页加载完成。")
             time.sleep(2)
@@ -57,22 +57,31 @@ class ContentCrawler:
     def _get_post_links(self):
         print("获取帖子链接...")
         try:
-            post_links = self.driver.find_elements(
+            post_sections = self.driver.find_elements(
                 By.XPATH, 
-                "//a[contains(@href, '/explore/') or contains(@href, '/note/')]"
+                '//*[@id="exploreFeeds"]/section'
             )
             
-            unique_links = []
+            post_links = []
             seen_hrefs = set()
             
-            for link in post_links:
-                href = link.get_attribute('href')
-                if href and href not in seen_hrefs and ('/explore/' in href or '/note/' in href):
-                    seen_hrefs.add(href)
-                    unique_links.append(link)
+            for i, section in enumerate(post_sections[:self.max_posts], 1):
+                try:
+                    link_element = section.find_element(
+                        By.XPATH,
+                        f'.//a[contains(@href, "/explore/") or contains(@href, "/note/")]'
+                    )
+                    href = link_element.get_attribute('href')
+                    if href and href not in seen_hrefs:
+                        seen_hrefs.add(href)
+                        post_links.append(link_element)
+                        print(f"找到第 {len(post_links)} 条帖子: {href}")
+                except Exception as e:
+                    print(f"获取第 {i} 条帖子链接失败: {e}")
+                    continue
             
-            print(f"找到 {len(unique_links)} 条不同的帖子链接。")
-            return unique_links
+            print(f"共找到 {len(post_links)} 条有效的帖子链接。")
+            return post_links
             
         except Exception as e:
             print(f"获取帖子链接失败: {e}")

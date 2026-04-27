@@ -1,0 +1,35 @@
+================================================================================
+小红书爬虫结果
+生成时间: 2026-04-26 21:05:40
+共爬取 1 条帖子
+================================================================================
+
+--------------------------------------------------------------------------------
+【第 1 条帖子】
+--------------------------------------------------------------------------------
+标题: 提取失败
+作者: 未知
+链接: https://www.xiaohongshu.com/explore/69edb1980000000035022696
+
+【内容】
+提取内容时出错: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000104b85ebc cxxbridge1$str$ptr + 3213376
+1   chromedriver                        0x0000000104b7de8c cxxbridge1$str$ptr + 3180560
+2   chromedriver                        0x00000001046438d4 _RNvCs10ygTOo3JCa_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 75096
+3   chromedriver                        0x000000010468b8b4 _RNvCs10ygTOo3JCa_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 369976
+4   chromedriver                        0x00000001046cb84c _RNvCs10ygTOo3JCa_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 632016
+5   chromedriver                        0x000000010468127c _RNvCs10ygTOo3JCa_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 327424
+6   chromedriver                        0x0000000104b43f60 cxxbridge1$str$ptr + 2943204
+7   chromedriver                        0x0000000104b47744 cxxbridge1$str$ptr + 2957512
+8   chromedriver                        0x0000000104b28e50 cxxbridge1$str$ptr + 2832340
+9   chromedriver                        0x0000000104b47fc4 cxxbridge1$str$ptr + 2959688
+10  chromedriver                        0x0000000104b19828 cxxbridge1$str$ptr + 2769324
+11  chromedriver                        0x0000000104b6c920 cxxbridge1$str$ptr + 3109540
+12  chromedriver                        0x0000000104b6ca9c cxxbridge1$str$ptr + 3109920
+13  chromedriver                        0x0000000104b7dae4 cxxbridge1$str$ptr + 3179624
+14  libsystem_pthread.dylib             0x000000019d2f7c0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019d2f2b80 thread_start + 8
+
+
+
