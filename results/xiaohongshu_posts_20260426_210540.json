@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "generated_at": "2026-04-26 21:05:40",
+    "total_posts": 1
+  },
+  "posts": [
+    {
+      "url": "https://www.xiaohongshu.com/explore/69edb1980000000035022696",
+      "title": "提取失败",
+      "author": "未知",
+      "content": "提取内容时出错: Message: \nStacktrace:\n0   chromedriver                        0x0000000104b85ebc cxxbridge1$str$ptr + 3213376\n1   chromedriver                        0x0000000104b7de8c cxxbridge1$str$ptr + 3180560\n2   chromedriver                        0x00000001046438d4 _RNvCs10ygTOo3JCa_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 75096\n3   chromedriver                        0x000000010468b8b4 _RNvCs10ygTOo3JCa_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 369976\n4   chromedriver                        0x00000001046cb84c _RNvCs10ygTOo3JCa_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 632016\n5   chromedriver                        0x000000010468127c _RNvCs10ygTOo3JCa_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 327424\n6   chromedriver                        0x0000000104b43f60 cxxbridge1$str$ptr + 2943204\n7   chromedriver                        0x0000000104b47744 cxxbridge1$str$ptr + 2957512\n8   chromedriver                        0x0000000104b28e50 cxxbridge1$str$ptr + 2832340\n9   chromedriver                        0x0000000104b47fc4 cxxbridge1$str$ptr + 2959688\n10  chromedriver                        0x0000000104b19828 cxxbridge1$str$ptr + 2769324\n11  chromedriver                        0x0000000104b6c920 cxxbridge1$str$ptr + 3109540\n12  chromedriver                        0x0000000104b6ca9c cxxbridge1$str$ptr + 3109920\n13  chromedriver                        0x0000000104b7dae4 cxxbridge1$str$ptr + 3179624\n14  libsystem_pthread.dylib             0x000000019d2f7c0c _pthread_start + 136\n15  libsystem_pthread.dylib             0x000000019d2f2b80 thread_start + 8\n"
+    }
+  ]
+}

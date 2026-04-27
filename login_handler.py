@@ -92,7 +92,7 @@ class LoginHandler:
         try:
             get_code_button = self.wait.until(
                 EC.element_to_be_clickable(
-                    (By.XPATH, "//button[contains(text(), '获取验证码')] | //span[contains(text(), '获取验证码')]/parent::button")
+                    (By.XPATH, '//*[@id="app"]/div[1]/div/div[1]/div[3]/div[2]/form/label[2]/span')
                 )
             )
             get_code_button.click()
@@ -114,7 +114,7 @@ class LoginHandler:
     def _enter_verification_code(self, verification_code):
         print(f"正在输入验证码: {verification_code}")
         try:
-            code_input = self.driver.find_element(By.XPATH, "//input[@placeholder='请输入验证码']")
+            code_input = self.driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div/div[1]/div[3]/div[2]/form/label[2]/input')
             code_input.clear()
             code_input.send_keys(verification_code)
             print("验证码输入完成。")
@@ -127,7 +127,7 @@ class LoginHandler:
         try:
             login_button = self.wait.until(
                 EC.element_to_be_clickable(
-                    (By.XPATH, "//button[contains(text(), '登录')] | //span[contains(text(), '登录')]/parent::button")
+                    (By.XPATH, '//*[@id="app"]/div[1]/div/div[1]/div[3]/div[2]/form/button')
                 )
             )
             login_button.click()
